@@ -19,8 +19,12 @@ Add the OpenSSL bin directory to your system s PATH environment variable. This a
 ## Genrating cert:
 
 Open Terminal(win+R> cmd> enter)
+
 type this first cmd: 
+
 openssl genrsa -des3 -out server.key 2048                    -> to generate a Private key , and type a Password !
+
 openssl req -new -key server.key -sha256 -out server.csr     -> generate a csr, and give a same Password !
+
 openssl x509 -req -days 365 -in server.csr -signkey server.key -sha256 -out server.crt -> generate a self-Signed certificate (Cname = yourHostname)
                                                                                           -to get your hostname > use cmd : hostname
