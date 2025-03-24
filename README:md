@@ -15,3 +15,8 @@ Add the OpenSSL bin directory to your system s PATH environment variable. This a
 Set Environment Variables:
 
 Add the OpenSSL bin directory to your system s PATH environment variable. This allows you to use OpenSSL commands from any command prompt window.
+
+## Genrating cert:
+
+Open Terminal(win+R> cmd> enter)
+type this first cmd: openssl genrsa -des3 -out server.key 2048 -> to generate a Private key
